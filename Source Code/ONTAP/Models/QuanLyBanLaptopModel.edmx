@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QuanLyBanLaptopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="QuanLyBanLaptopModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="QuanLyBanLaptopModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblChiTietHD" EntityType="QuanLyBanLaptopModel.Store.tblChiTietHD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblChiTietThietBi" EntityType="QuanLyBanLaptopModel.Store.tblChiTietThietBi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblGiaoHang" EntityType="QuanLyBanLaptopModel.Store.tblGiaoHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblHoaDon" EntityType="QuanLyBanLaptopModel.Store.tblHoaDon" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblKhachHang" EntityType="QuanLyBanLaptopModel.Store.tblKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLoaiNhanVien" EntityType="QuanLyBanLaptopModel.Store.tblLoaiNhanVien" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblLoaiThietBi" EntityType="QuanLyBanLaptopModel.Store.tblLoaiThietBi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblNhaCungCap" EntityType="QuanLyBanLaptopModel.Store.tblNhaCungCap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblNhanVien" EntityType="QuanLyBanLaptopModel.Store.tblNhanVien" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblNhomTB" EntityType="QuanLyBanLaptopModel.Store.tblNhomTB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblPhieuNhapHang" EntityType="QuanLyBanLaptopModel.Store.tblPhieuNhapHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblPhieuXuatHang" EntityType="QuanLyBanLaptopModel.Store.tblPhieuXuatHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblTaiKhoan" EntityType="QuanLyBanLaptopModel.Store.tblTaiKhoan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblThanhToan" EntityType="QuanLyBanLaptopModel.Store.tblThanhToan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblThietBi" EntityType="QuanLyBanLaptopModel.Store.tblThietBi" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tblChiTietHD_tblChiTietThietBi" Association="QuanLyBanLaptopModel.Store.FK_tblChiTietHD_tblChiTietThietBi">
+            <End Role="tblChiTietThietBi" EntitySet="tblChiTietThietBi" />
+            <End Role="tblChiTietHD" EntitySet="tblChiTietHD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblChiTietHD_tblHoaDon" Association="QuanLyBanLaptopModel.Store.FK_tblChiTietHD_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblChiTietHD" EntitySet="tblChiTietHD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblChiTietThietBi_tblThietBi" Association="QuanLyBanLaptopModel.Store.FK_tblChiTietThietBi_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblChiTietThietBi" EntitySet="tblChiTietThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblGiaoHang_tblHoaDon" Association="QuanLyBanLaptopModel.Store.FK_tblGiaoHang_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblGiaoHang" EntitySet="tblGiaoHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblHoaDon_tblNhanVien" Association="QuanLyBanLaptopModel.Store.FK_tblHoaDon_tblNhanVien">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKhachHang_tblTaiKhoan" Association="QuanLyBanLaptopModel.Store.FK_tblKhachHang_tblTaiKhoan">
+            <End Role="tblTaiKhoan" EntitySet="tblTaiKhoan" />
+            <End Role="tblKhachHang" EntitySet="tblKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblNhanVien_tblLoaiNhanVien" Association="QuanLyBanLaptopModel.Store.FK_tblNhanVien_tblLoaiNhanVien">
+            <End Role="tblLoaiNhanVien" EntitySet="tblLoaiNhanVien" />
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblNhaCungCap" Association="QuanLyBanLaptopModel.Store.FK_tblPhieuNhapHang_tblNhaCungCap">
+            <End Role="tblNhaCungCap" EntitySet="tblNhaCungCap" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblNhanVien" Association="QuanLyBanLaptopModel.Store.FK_tblPhieuNhapHang_tblNhanVien">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblThietBi" Association="QuanLyBanLaptopModel.Store.FK_tblPhieuNhapHang_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuXuatHang_tblNhanVien_XuatHang" Association="QuanLyBanLaptopModel.Store.FK_tblPhieuXuatHang_tblNhanVien_XuatHang">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblPhieuXuatHang" EntitySet="tblPhieuXuatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuXuatHang_tblThietBi" Association="QuanLyBanLaptopModel.Store.FK_tblPhieuXuatHang_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblPhieuXuatHang" EntitySet="tblPhieuXuatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThanhToan_tblHoaDon" Association="QuanLyBanLaptopModel.Store.FK_tblThanhToan_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblThanhToan" EntitySet="tblThanhToan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThanhToan_tblKhachHang" Association="QuanLyBanLaptopModel.Store.FK_tblThanhToan_tblKhachHang">
+            <End Role="tblKhachHang" EntitySet="tblKhachHang" />
+            <End Role="tblThanhToan" EntitySet="tblThanhToan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblLoaiThietBi" Association="QuanLyBanLaptopModel.Store.FK_tblThietBi_tblLoaiThietBi">
+            <End Role="tblLoaiThietBi" EntitySet="tblLoaiThietBi" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblNhaCungCap" Association="QuanLyBanLaptopModel.Store.FK_tblThietBi_tblNhaCungCap">
+            <End Role="tblNhaCungCap" EntitySet="tblNhaCungCap" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblNhomTB" Association="QuanLyBanLaptopModel.Store.FK_tblThietBi_tblNhomTB">
+            <End Role="tblNhomTB" EntitySet="tblNhomTB" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblChiTietHD">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaTB" />
+            <PropertyRef Name="MaCauHinh" />
+          </Key>
+          <Property Name="MaHD" Type="int" Nullable="false" />
+          <Property Name="MaTB" Type="int" Nullable="false" />
+          <Property Name="MaCauHinh" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="ThanhTien" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblChiTietThietBi">
+          <Key>
+            <PropertyRef Name="MaTB" />
+            <PropertyRef Name="MaCauHinh" />
+          </Key>
+          <Property Name="MaTB" Type="int" Nullable="false" />
+          <Property Name="MaCauHinh" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="GiaTien" Type="int" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" Nullable="false" />
+          <Property Name="HinhAnhThem" Type="text" />
+          <Property Name="CPU" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="RAM" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="OCung" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="ManHinh" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DoHoa" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Pin" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Khac" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="tblGiaoHang">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaVanChuyen" />
+          </Key>
+          <Property Name="MaHD" Type="int" Nullable="false" />
+          <Property Name="MaVanChuyen" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNguoiNhan" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DiaChi1" Type="text" Nullable="false" />
+          <Property Name="DiaChi2" Type="text" />
+          <Property Name="DiaChi3" Type="text" />
+          <Property Name="MaDonViVanChuyen" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="SoDT1" Type="char" Nullable="false" MaxLength="12" />
+          <Property Name="SoDT2" Type="char" MaxLength="12" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblHoaDon">
+          <Key>
+            <PropertyRef Name="MaHD" />
+          </Key>
+          <Property Name="MaHD" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenHD" Type="nvarchar" MaxLength="100" />
+          <Property Name="NgayHD" Type="datetime" Nullable="false" />
+          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="TongTien" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblKhachHang">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenKH" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NgaySinh" Type="date" Nullable="false" />
+          <Property Name="GioiTinh" Type="nchar" Nullable="false" MaxLength="4" />
+          <Property Name="DienThoai" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="DiaChi" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="TaiKhoan" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblLoaiNhanVien">
+          <Key>
+            <PropertyRef Name="MaLoaiNV" />
+          </Key>
+          <Property Name="MaLoaiNV" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiNV" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblLoaiThietBi">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+          </Key>
+          <Property Name="MaLoai" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblNhaCungCap">
+          <Key>
+            <PropertyRef Name="MaNCC" />
+          </Key>
+          <Property Name="MaNCC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNCC" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DienThoai" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblNhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNV" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DiaChi" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DienThoai" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="MaLoaiNV" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblNhomTB">
+          <Key>
+            <PropertyRef Name="MaNhomTB" />
+          </Key>
+          <Property Name="MaNhomTB" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhom" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblPhieuNhapHang">
+          <Key>
+            <PropertyRef Name="MaPhieuNH" />
+          </Key>
+          <Property Name="MaPhieuNH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaTB" Type="int" Nullable="false" />
+          <Property Name="MaNVNhanHang" Type="int" Nullable="false" />
+          <Property Name="MaNCC" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="NgayNhap" Type="nchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblPhieuXuatHang">
+          <Key>
+            <PropertyRef Name="MaPhieuXH" />
+          </Key>
+          <Property Name="MaPhieuXH" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaTB" Type="int" Nullable="false" />
+          <Property Name="MaNVXuatHang" Type="int" Nullable="false" />
+          <Property Name="MaNVNhanHang" Type="int" Nullable="false" />
+          <Property Name="MaHD" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="NgayXuat" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTaiKhoan">
+          <Key>
+            <PropertyRef Name="TaiKhoan" />
+          </Key>
+          <Property Name="TaiKhoan" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MatKhau" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="TrangThai" Type="bit" Nullable="false" />
+          <Property Name="NgayDangKy" Type="date" />
+          <Property Name="LoaiTK" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblThanhToan">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaHD" Type="int" Nullable="false" />
+          <Property Name="MaKH" Type="int" Nullable="false" />
+          <Property Name="SoTienThanhToan" Type="money" Nullable="false" />
+          <Property Name="NgayThanhToan" Type="date" Nullable="false" />
+          <Property Name="PhuongThucThanhToan" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblThietBi">
+          <Key>
+            <PropertyRef Name="MaTB" />
+          </Key>
+          <Property Name="MaTB" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenTB" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NhanHieu" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaLoai" Type="int" Nullable="false" />
+          <Property Name="MaNCC" Type="int" Nullable="false" />
+          <Property Name="ThongTinMoTa" Type="text" />
+          <Property Name="HinhAnhChung" Type="text" />
+          <Property Name="NgayUpLoad" Type="date" />
+          <Property Name="MaNhomTB" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tblChiTietHD_tblChiTietThietBi">
+          <End Role="tblChiTietThietBi" Type="QuanLyBanLaptopModel.Store.tblChiTietThietBi" Multiplicity="1" />
+          <End Role="tblChiTietHD" Type="QuanLyBanLaptopModel.Store.tblChiTietHD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblChiTietThietBi">
+              <PropertyRef Name="MaTB" />
+              <PropertyRef Name="MaCauHinh" />
+            </Principal>
+            <Dependent Role="tblChiTietHD">
+              <PropertyRef Name="MaTB" />
+              <PropertyRef Name="MaCauHinh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblChiTietHD_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.Store.tblHoaDon" Multiplicity="1" />
+          <End Role="tblChiTietHD" Type="QuanLyBanLaptopModel.Store.tblChiTietHD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblChiTietHD">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblChiTietThietBi_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="1" />
+          <End Role="tblChiTietThietBi" Type="QuanLyBanLaptopModel.Store.tblChiTietThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblChiTietThietBi">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblGiaoHang_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.Store.tblHoaDon" Multiplicity="1" />
+          <End Role="tblGiaoHang" Type="QuanLyBanLaptopModel.Store.tblGiaoHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblGiaoHang">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblHoaDon_tblNhanVien">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.Store.tblNhanVien" Multiplicity="1" />
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.Store.tblHoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblHoaDon">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKhachHang_tblTaiKhoan">
+          <End Role="tblTaiKhoan" Type="QuanLyBanLaptopModel.Store.tblTaiKhoan" Multiplicity="1" />
+          <End Role="tblKhachHang" Type="QuanLyBanLaptopModel.Store.tblKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTaiKhoan">
+              <PropertyRef Name="TaiKhoan" />
+            </Principal>
+            <Dependent Role="tblKhachHang">
+              <PropertyRef Name="TaiKhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblNhanVien_tblLoaiNhanVien">
+          <End Role="tblLoaiNhanVien" Type="QuanLyBanLaptopModel.Store.tblLoaiNhanVien" Multiplicity="1" />
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.Store.tblNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLoaiNhanVien">
+              <PropertyRef Name="MaLoaiNV" />
+            </Principal>
+            <Dependent Role="tblNhanVien">
+              <PropertyRef Name="MaLoaiNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblNhaCungCap">
+          <End Role="tblNhaCungCap" Type="QuanLyBanLaptopModel.Store.tblNhaCungCap" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.Store.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhaCungCap">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblNhanVien">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.Store.tblNhanVien" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.Store.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaNVNhanHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.Store.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuXuatHang_tblNhanVien_XuatHang">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.Store.tblNhanVien" Multiplicity="1" />
+          <End Role="tblPhieuXuatHang" Type="QuanLyBanLaptopModel.Store.tblPhieuXuatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblPhieuXuatHang">
+              <PropertyRef Name="MaNVXuatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuXuatHang_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="1" />
+          <End Role="tblPhieuXuatHang" Type="QuanLyBanLaptopModel.Store.tblPhieuXuatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblPhieuXuatHang">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThanhToan_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.Store.tblHoaDon" Multiplicity="1" />
+          <End Role="tblThanhToan" Type="QuanLyBanLaptopModel.Store.tblThanhToan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblThanhToan">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThanhToan_tblKhachHang">
+          <End Role="tblKhachHang" Type="QuanLyBanLaptopModel.Store.tblKhachHang" Multiplicity="1" />
+          <End Role="tblThanhToan" Type="QuanLyBanLaptopModel.Store.tblThanhToan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKhachHang">
+              <PropertyRef Name="MaKH" />
+            </Principal>
+            <Dependent Role="tblThanhToan">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblLoaiThietBi">
+          <End Role="tblLoaiThietBi" Type="QuanLyBanLaptopModel.Store.tblLoaiThietBi" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLoaiThietBi">
+              <PropertyRef Name="MaLoai" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblNhaCungCap">
+          <End Role="tblNhaCungCap" Type="QuanLyBanLaptopModel.Store.tblNhaCungCap" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhaCungCap">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblNhomTB">
+          <End Role="tblNhomTB" Type="QuanLyBanLaptopModel.Store.tblNhomTB" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.Store.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhomTB">
+              <PropertyRef Name="MaNhomTB" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaNhomTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuanLyBanLaptopModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuanLyBanLaptopEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="QuanLyBanLaptopModel.sysdiagrams" />
+          <EntitySet Name="tblChiTietHD" EntityType="QuanLyBanLaptopModel.tblChiTietHD" />
+          <EntitySet Name="tblChiTietThietBi" EntityType="QuanLyBanLaptopModel.tblChiTietThietBi" />
+          <EntitySet Name="tblGiaoHang" EntityType="QuanLyBanLaptopModel.tblGiaoHang" />
+          <EntitySet Name="tblHoaDon" EntityType="QuanLyBanLaptopModel.tblHoaDon" />
+          <EntitySet Name="tblKhachHang" EntityType="QuanLyBanLaptopModel.tblKhachHang" />
+          <EntitySet Name="tblLoaiNhanVien" EntityType="QuanLyBanLaptopModel.tblLoaiNhanVien" />
+          <EntitySet Name="tblLoaiThietBi" EntityType="QuanLyBanLaptopModel.tblLoaiThietBi" />
+          <EntitySet Name="tblNhaCungCap" EntityType="QuanLyBanLaptopModel.tblNhaCungCap" />
+          <EntitySet Name="tblNhanVien" EntityType="QuanLyBanLaptopModel.tblNhanVien" />
+          <EntitySet Name="tblNhomTB" EntityType="QuanLyBanLaptopModel.tblNhomTB" />
+          <EntitySet Name="tblPhieuNhapHang" EntityType="QuanLyBanLaptopModel.tblPhieuNhapHang" />
+          <EntitySet Name="tblPhieuXuatHang" EntityType="QuanLyBanLaptopModel.tblPhieuXuatHang" />
+          <EntitySet Name="tblTaiKhoan" EntityType="QuanLyBanLaptopModel.tblTaiKhoan" />
+          <EntitySet Name="tblThanhToan" EntityType="QuanLyBanLaptopModel.tblThanhToan" />
+          <EntitySet Name="tblThietBi" EntityType="QuanLyBanLaptopModel.tblThietBi" />
+          <AssociationSet Name="FK_tblChiTietHD_tblChiTietThietBi" Association="QuanLyBanLaptopModel.FK_tblChiTietHD_tblChiTietThietBi">
+            <End Role="tblChiTietThietBi" EntitySet="tblChiTietThietBi" />
+            <End Role="tblChiTietHD" EntitySet="tblChiTietHD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblChiTietHD_tblHoaDon" Association="QuanLyBanLaptopModel.FK_tblChiTietHD_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblChiTietHD" EntitySet="tblChiTietHD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblChiTietThietBi_tblThietBi" Association="QuanLyBanLaptopModel.FK_tblChiTietThietBi_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblChiTietThietBi" EntitySet="tblChiTietThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblGiaoHang_tblHoaDon" Association="QuanLyBanLaptopModel.FK_tblGiaoHang_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblGiaoHang" EntitySet="tblGiaoHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblHoaDon_tblNhanVien" Association="QuanLyBanLaptopModel.FK_tblHoaDon_tblNhanVien">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThanhToan_tblHoaDon" Association="QuanLyBanLaptopModel.FK_tblThanhToan_tblHoaDon">
+            <End Role="tblHoaDon" EntitySet="tblHoaDon" />
+            <End Role="tblThanhToan" EntitySet="tblThanhToan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblKhachHang_tblTaiKhoan" Association="QuanLyBanLaptopModel.FK_tblKhachHang_tblTaiKhoan">
+            <End Role="tblTaiKhoan" EntitySet="tblTaiKhoan" />
+            <End Role="tblKhachHang" EntitySet="tblKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThanhToan_tblKhachHang" Association="QuanLyBanLaptopModel.FK_tblThanhToan_tblKhachHang">
+            <End Role="tblKhachHang" EntitySet="tblKhachHang" />
+            <End Role="tblThanhToan" EntitySet="tblThanhToan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblNhanVien_tblLoaiNhanVien" Association="QuanLyBanLaptopModel.FK_tblNhanVien_tblLoaiNhanVien">
+            <End Role="tblLoaiNhanVien" EntitySet="tblLoaiNhanVien" />
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblLoaiThietBi" Association="QuanLyBanLaptopModel.FK_tblThietBi_tblLoaiThietBi">
+            <End Role="tblLoaiThietBi" EntitySet="tblLoaiThietBi" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblNhaCungCap" Association="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhaCungCap">
+            <End Role="tblNhaCungCap" EntitySet="tblNhaCungCap" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblNhaCungCap" Association="QuanLyBanLaptopModel.FK_tblThietBi_tblNhaCungCap">
+            <End Role="tblNhaCungCap" EntitySet="tblNhaCungCap" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblNhanVien" Association="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhanVien">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuXuatHang_tblNhanVien_XuatHang" Association="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblNhanVien_XuatHang">
+            <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+            <End Role="tblPhieuXuatHang" EntitySet="tblPhieuXuatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblThietBi_tblNhomTB" Association="QuanLyBanLaptopModel.FK_tblThietBi_tblNhomTB">
+            <End Role="tblNhomTB" EntitySet="tblNhomTB" />
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuNhapHang_tblThietBi" Association="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblPhieuNhapHang" EntitySet="tblPhieuNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblPhieuXuatHang_tblThietBi" Association="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblThietBi">
+            <End Role="tblThietBi" EntitySet="tblThietBi" />
+            <End Role="tblPhieuXuatHang" EntitySet="tblPhieuXuatHang" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblChiTietHD">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaTB" />
+            <PropertyRef Name="MaCauHinh" />
+          </Key>
+          <Property Name="MaHD" Type="Int32" Nullable="false" />
+          <Property Name="MaTB" Type="Int32" Nullable="false" />
+          <Property Name="MaCauHinh" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tblChiTietThietBi" Relationship="QuanLyBanLaptopModel.FK_tblChiTietHD_tblChiTietThietBi" FromRole="tblChiTietHD" ToRole="tblChiTietThietBi" />
+          <NavigationProperty Name="tblHoaDon" Relationship="QuanLyBanLaptopModel.FK_tblChiTietHD_tblHoaDon" FromRole="tblChiTietHD" ToRole="tblHoaDon" />
+        </EntityType>
+        <EntityType Name="tblChiTietThietBi">
+          <Key>
+            <PropertyRef Name="MaTB" />
+            <PropertyRef Name="MaCauHinh" />
+          </Key>
+          <Property Name="MaTB" Type="Int32" Nullable="false" />
+          <Property Name="MaCauHinh" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="GiaTien" Type="Int32" Nullable="false" />
+          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <Property Name="HinhAnhThem" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CPU" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="RAM" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="OCung" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="ManHinh" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DoHoa" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Pin" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Khac" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblChiTietHD" Relationship="QuanLyBanLaptopModel.FK_tblChiTietHD_tblChiTietThietBi" FromRole="tblChiTietThietBi" ToRole="tblChiTietHD" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblChiTietThietBi_tblThietBi" FromRole="tblChiTietThietBi" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblGiaoHang">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaVanChuyen" />
+          </Key>
+          <Property Name="MaHD" Type="Int32" Nullable="false" />
+          <Property Name="MaVanChuyen" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNguoiNhan" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi1" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DiaChi2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DiaChi3" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="MaDonViVanChuyen" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="SoDT1" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="SoDT2" Type="String" MaxLength="12" Unicode="false" FixedLength="true" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblHoaDon" Relationship="QuanLyBanLaptopModel.FK_tblGiaoHang_tblHoaDon" FromRole="tblGiaoHang" ToRole="tblHoaDon" />
+        </EntityType>
+        <EntityType Name="tblHoaDon">
+          <Key>
+            <PropertyRef Name="MaHD" />
+          </Key>
+          <Property Name="MaHD" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenHD" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NgayHD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="TongTien" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="tblChiTietHD" Relationship="QuanLyBanLaptopModel.FK_tblChiTietHD_tblHoaDon" FromRole="tblHoaDon" ToRole="tblChiTietHD" />
+          <NavigationProperty Name="tblGiaoHang" Relationship="QuanLyBanLaptopModel.FK_tblGiaoHang_tblHoaDon" FromRole="tblHoaDon" ToRole="tblGiaoHang" />
+          <NavigationProperty Name="tblNhanVien" Relationship="QuanLyBanLaptopModel.FK_tblHoaDon_tblNhanVien" FromRole="tblHoaDon" ToRole="tblNhanVien" />
+          <NavigationProperty Name="tblThanhToan" Relationship="QuanLyBanLaptopModel.FK_tblThanhToan_tblHoaDon" FromRole="tblHoaDon" ToRole="tblThanhToan" />
+        </EntityType>
+        <EntityType Name="tblKhachHang">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKH" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="GioiTinh" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="true" />
+          <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TaiKhoan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblTaiKhoan" Relationship="QuanLyBanLaptopModel.FK_tblKhachHang_tblTaiKhoan" FromRole="tblKhachHang" ToRole="tblTaiKhoan" />
+          <NavigationProperty Name="tblThanhToan" Relationship="QuanLyBanLaptopModel.FK_tblThanhToan_tblKhachHang" FromRole="tblKhachHang" ToRole="tblThanhToan" />
+        </EntityType>
+        <EntityType Name="tblLoaiNhanVien">
+          <Key>
+            <PropertyRef Name="MaLoaiNV" />
+          </Key>
+          <Property Name="MaLoaiNV" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiNV" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblNhanVien" Relationship="QuanLyBanLaptopModel.FK_tblNhanVien_tblLoaiNhanVien" FromRole="tblLoaiNhanVien" ToRole="tblNhanVien" />
+        </EntityType>
+        <EntityType Name="tblLoaiThietBi">
+          <Key>
+            <PropertyRef Name="MaLoai" />
+          </Key>
+          <Property Name="MaLoai" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblLoaiThietBi" FromRole="tblLoaiThietBi" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblNhaCungCap">
+          <Key>
+            <PropertyRef Name="MaNCC" />
+          </Key>
+          <Property Name="MaNCC" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNCC" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblPhieuNhapHang" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhaCungCap" FromRole="tblNhaCungCap" ToRole="tblPhieuNhapHang" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblNhaCungCap" FromRole="tblNhaCungCap" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblNhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNV" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DienThoai" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MaLoaiNV" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblHoaDon" Relationship="QuanLyBanLaptopModel.FK_tblHoaDon_tblNhanVien" FromRole="tblNhanVien" ToRole="tblHoaDon" />
+          <NavigationProperty Name="tblLoaiNhanVien" Relationship="QuanLyBanLaptopModel.FK_tblNhanVien_tblLoaiNhanVien" FromRole="tblNhanVien" ToRole="tblLoaiNhanVien" />
+          <NavigationProperty Name="tblPhieuNhapHang" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhanVien" FromRole="tblNhanVien" ToRole="tblPhieuNhapHang" />
+          <NavigationProperty Name="tblPhieuXuatHang" Relationship="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblNhanVien_XuatHang" FromRole="tblNhanVien" ToRole="tblPhieuXuatHang" />
+        </EntityType>
+        <EntityType Name="tblNhomTB">
+          <Key>
+            <PropertyRef Name="MaNhomTB" />
+          </Key>
+          <Property Name="MaNhomTB" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhom" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblNhomTB" FromRole="tblNhomTB" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblPhieuNhapHang">
+          <Key>
+            <PropertyRef Name="MaPhieuNH" />
+          </Key>
+          <Property Name="MaPhieuNH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaTB" Type="Int32" Nullable="false" />
+          <Property Name="MaNVNhanHang" Type="Int32" Nullable="false" />
+          <Property Name="MaNCC" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="NgayNhap" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="tblNhaCungCap" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhaCungCap" FromRole="tblPhieuNhapHang" ToRole="tblNhaCungCap" />
+          <NavigationProperty Name="tblNhanVien" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblNhanVien" FromRole="tblPhieuNhapHang" ToRole="tblNhanVien" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblThietBi" FromRole="tblPhieuNhapHang" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblPhieuXuatHang">
+          <Key>
+            <PropertyRef Name="MaPhieuXH" />
+          </Key>
+          <Property Name="MaPhieuXH" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaTB" Type="Int32" Nullable="false" />
+          <Property Name="MaNVXuatHang" Type="Int32" Nullable="false" />
+          <Property Name="MaNVNhanHang" Type="Int32" Nullable="false" />
+          <Property Name="MaHD" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="NgayXuat" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblNhanVien" Relationship="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblNhanVien_XuatHang" FromRole="tblPhieuXuatHang" ToRole="tblNhanVien" />
+          <NavigationProperty Name="tblThietBi" Relationship="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblThietBi" FromRole="tblPhieuXuatHang" ToRole="tblThietBi" />
+        </EntityType>
+        <EntityType Name="tblTaiKhoan">
+          <Key>
+            <PropertyRef Name="TaiKhoan" />
+          </Key>
+          <Property Name="TaiKhoan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <Property Name="NgayDangKy" Type="DateTime" Precision="0" />
+          <Property Name="LoaiTK" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblKhachHang" Relationship="QuanLyBanLaptopModel.FK_tblKhachHang_tblTaiKhoan" FromRole="tblTaiKhoan" ToRole="tblKhachHang" />
+        </EntityType>
+        <EntityType Name="tblThanhToan">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaHD" Type="Int32" Nullable="false" />
+          <Property Name="MaKH" Type="Int32" Nullable="false" />
+          <Property Name="SoTienThanhToan" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="NgayThanhToan" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PhuongThucThanhToan" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tblHoaDon" Relationship="QuanLyBanLaptopModel.FK_tblThanhToan_tblHoaDon" FromRole="tblThanhToan" ToRole="tblHoaDon" />
+          <NavigationProperty Name="tblKhachHang" Relationship="QuanLyBanLaptopModel.FK_tblThanhToan_tblKhachHang" FromRole="tblThanhToan" ToRole="tblKhachHang" />
+        </EntityType>
+        <EntityType Name="tblThietBi">
+          <Key>
+            <PropertyRef Name="MaTB" />
+          </Key>
+          <Property Name="MaTB" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTB" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NhanHieu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaLoai" Type="Int32" Nullable="false" />
+          <Property Name="MaNCC" Type="Int32" Nullable="false" />
+          <Property Name="ThongTinMoTa" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="HinhAnhChung" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="NgayUpLoad" Type="DateTime" Precision="0" />
+          <Property Name="MaNhomTB" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblChiTietThietBi" Relationship="QuanLyBanLaptopModel.FK_tblChiTietThietBi_tblThietBi" FromRole="tblThietBi" ToRole="tblChiTietThietBi" />
+          <NavigationProperty Name="tblLoaiThietBi" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblLoaiThietBi" FromRole="tblThietBi" ToRole="tblLoaiThietBi" />
+          <NavigationProperty Name="tblNhaCungCap" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblNhaCungCap" FromRole="tblThietBi" ToRole="tblNhaCungCap" />
+          <NavigationProperty Name="tblNhomTB" Relationship="QuanLyBanLaptopModel.FK_tblThietBi_tblNhomTB" FromRole="tblThietBi" ToRole="tblNhomTB" />
+          <NavigationProperty Name="tblPhieuNhapHang" Relationship="QuanLyBanLaptopModel.FK_tblPhieuNhapHang_tblThietBi" FromRole="tblThietBi" ToRole="tblPhieuNhapHang" />
+          <NavigationProperty Name="tblPhieuXuatHang" Relationship="QuanLyBanLaptopModel.FK_tblPhieuXuatHang_tblThietBi" FromRole="tblThietBi" ToRole="tblPhieuXuatHang" />
+        </EntityType>
+        <Association Name="FK_tblChiTietHD_tblChiTietThietBi">
+          <End Role="tblChiTietThietBi" Type="QuanLyBanLaptopModel.tblChiTietThietBi" Multiplicity="1" />
+          <End Role="tblChiTietHD" Type="QuanLyBanLaptopModel.tblChiTietHD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblChiTietThietBi">
+              <PropertyRef Name="MaTB" />
+              <PropertyRef Name="MaCauHinh" />
+            </Principal>
+            <Dependent Role="tblChiTietHD">
+              <PropertyRef Name="MaTB" />
+              <PropertyRef Name="MaCauHinh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblChiTietHD_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.tblHoaDon" Multiplicity="1" />
+          <End Role="tblChiTietHD" Type="QuanLyBanLaptopModel.tblChiTietHD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblChiTietHD">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblChiTietThietBi_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="1" />
+          <End Role="tblChiTietThietBi" Type="QuanLyBanLaptopModel.tblChiTietThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblChiTietThietBi">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblGiaoHang_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.tblHoaDon" Multiplicity="1" />
+          <End Role="tblGiaoHang" Type="QuanLyBanLaptopModel.tblGiaoHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblGiaoHang">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblHoaDon_tblNhanVien">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.tblNhanVien" Multiplicity="1" />
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.tblHoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblHoaDon">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThanhToan_tblHoaDon">
+          <End Role="tblHoaDon" Type="QuanLyBanLaptopModel.tblHoaDon" Multiplicity="1" />
+          <End Role="tblThanhToan" Type="QuanLyBanLaptopModel.tblThanhToan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblHoaDon">
+              <PropertyRef Name="MaHD" />
+            </Principal>
+            <Dependent Role="tblThanhToan">
+              <PropertyRef Name="MaHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblKhachHang_tblTaiKhoan">
+          <End Role="tblTaiKhoan" Type="QuanLyBanLaptopModel.tblTaiKhoan" Multiplicity="1" />
+          <End Role="tblKhachHang" Type="QuanLyBanLaptopModel.tblKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTaiKhoan">
+              <PropertyRef Name="TaiKhoan" />
+            </Principal>
+            <Dependent Role="tblKhachHang">
+              <PropertyRef Name="TaiKhoan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThanhToan_tblKhachHang">
+          <End Role="tblKhachHang" Type="QuanLyBanLaptopModel.tblKhachHang" Multiplicity="1" />
+          <End Role="tblThanhToan" Type="QuanLyBanLaptopModel.tblThanhToan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblKhachHang">
+              <PropertyRef Name="MaKH" />
+            </Principal>
+            <Dependent Role="tblThanhToan">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblNhanVien_tblLoaiNhanVien">
+          <End Role="tblLoaiNhanVien" Type="QuanLyBanLaptopModel.tblLoaiNhanVien" Multiplicity="1" />
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.tblNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLoaiNhanVien">
+              <PropertyRef Name="MaLoaiNV" />
+            </Principal>
+            <Dependent Role="tblNhanVien">
+              <PropertyRef Name="MaLoaiNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblLoaiThietBi">
+          <End Role="tblLoaiThietBi" Type="QuanLyBanLaptopModel.tblLoaiThietBi" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblLoaiThietBi">
+              <PropertyRef Name="MaLoai" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblNhaCungCap">
+          <End Role="tblNhaCungCap" Type="QuanLyBanLaptopModel.tblNhaCungCap" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhaCungCap">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblNhaCungCap">
+          <End Role="tblNhaCungCap" Type="QuanLyBanLaptopModel.tblNhaCungCap" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhaCungCap">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblNhanVien">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.tblNhanVien" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaNVNhanHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuXuatHang_tblNhanVien_XuatHang">
+          <End Role="tblNhanVien" Type="QuanLyBanLaptopModel.tblNhanVien" Multiplicity="1" />
+          <End Role="tblPhieuXuatHang" Type="QuanLyBanLaptopModel.tblPhieuXuatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="tblPhieuXuatHang">
+              <PropertyRef Name="MaNVXuatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblThietBi_tblNhomTB">
+          <End Role="tblNhomTB" Type="QuanLyBanLaptopModel.tblNhomTB" Multiplicity="1" />
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblNhomTB">
+              <PropertyRef Name="MaNhomTB" />
+            </Principal>
+            <Dependent Role="tblThietBi">
+              <PropertyRef Name="MaNhomTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuNhapHang_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="1" />
+          <End Role="tblPhieuNhapHang" Type="QuanLyBanLaptopModel.tblPhieuNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblPhieuNhapHang">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblPhieuXuatHang_tblThietBi">
+          <End Role="tblThietBi" Type="QuanLyBanLaptopModel.tblThietBi" Multiplicity="1" />
+          <End Role="tblPhieuXuatHang" Type="QuanLyBanLaptopModel.tblPhieuXuatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblThietBi">
+              <PropertyRef Name="MaTB" />
+            </Principal>
+            <Dependent Role="tblPhieuXuatHang">
+              <PropertyRef Name="MaTB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuanLyBanLaptopModelStoreContainer" CdmEntityContainer="QuanLyBanLaptopEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblChiTietHD">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblChiTietHD">
+              <MappingFragment StoreEntitySet="tblChiTietHD">
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="MaCauHinh" ColumnName="MaCauHinh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblChiTietThietBi">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblChiTietThietBi">
+              <MappingFragment StoreEntitySet="tblChiTietThietBi">
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="MaCauHinh" ColumnName="MaCauHinh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="HinhAnhThem" ColumnName="HinhAnhThem" />
+                <ScalarProperty Name="CPU" ColumnName="CPU" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="OCung" ColumnName="OCung" />
+                <ScalarProperty Name="ManHinh" ColumnName="ManHinh" />
+                <ScalarProperty Name="DoHoa" ColumnName="DoHoa" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="Khac" ColumnName="Khac" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblGiaoHang">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblGiaoHang">
+              <MappingFragment StoreEntitySet="tblGiaoHang">
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="MaVanChuyen" ColumnName="MaVanChuyen" />
+                <ScalarProperty Name="TenNguoiNhan" ColumnName="TenNguoiNhan" />
+                <ScalarProperty Name="DiaChi1" ColumnName="DiaChi1" />
+                <ScalarProperty Name="DiaChi2" ColumnName="DiaChi2" />
+                <ScalarProperty Name="DiaChi3" ColumnName="DiaChi3" />
+                <ScalarProperty Name="MaDonViVanChuyen" ColumnName="MaDonViVanChuyen" />
+                <ScalarProperty Name="SoDT1" ColumnName="SoDT1" />
+                <ScalarProperty Name="SoDT2" ColumnName="SoDT2" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblHoaDon">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblHoaDon">
+              <MappingFragment StoreEntitySet="tblHoaDon">
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="TenHD" ColumnName="TenHD" />
+                <ScalarProperty Name="NgayHD" ColumnName="NgayHD" />
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKhachHang">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblKhachHang">
+              <MappingFragment StoreEntitySet="tblKhachHang">
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLoaiNhanVien">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblLoaiNhanVien">
+              <MappingFragment StoreEntitySet="tblLoaiNhanVien">
+                <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
+                <ScalarProperty Name="TenLoaiNV" ColumnName="TenLoaiNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLoaiThietBi">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblLoaiThietBi">
+              <MappingFragment StoreEntitySet="tblLoaiThietBi">
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNhaCungCap">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblNhaCungCap">
+              <MappingFragment StoreEntitySet="tblNhaCungCap">
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="TenNCC" ColumnName="TenNCC" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNhanVien">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblNhanVien">
+              <MappingFragment StoreEntitySet="tblNhanVien">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MaLoaiNV" ColumnName="MaLoaiNV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNhomTB">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblNhomTB">
+              <MappingFragment StoreEntitySet="tblNhomTB">
+                <ScalarProperty Name="MaNhomTB" ColumnName="MaNhomTB" />
+                <ScalarProperty Name="TenNhom" ColumnName="TenNhom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPhieuNhapHang">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblPhieuNhapHang">
+              <MappingFragment StoreEntitySet="tblPhieuNhapHang">
+                <ScalarProperty Name="MaPhieuNH" ColumnName="MaPhieuNH" />
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="MaNVNhanHang" ColumnName="MaNVNhanHang" />
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="NgayNhap" ColumnName="NgayNhap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPhieuXuatHang">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblPhieuXuatHang">
+              <MappingFragment StoreEntitySet="tblPhieuXuatHang">
+                <ScalarProperty Name="MaPhieuXH" ColumnName="MaPhieuXH" />
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="MaNVXuatHang" ColumnName="MaNVXuatHang" />
+                <ScalarProperty Name="MaNVNhanHang" ColumnName="MaNVNhanHang" />
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="NgayXuat" ColumnName="NgayXuat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTaiKhoan">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblTaiKhoan">
+              <MappingFragment StoreEntitySet="tblTaiKhoan">
+                <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="NgayDangKy" ColumnName="NgayDangKy" />
+                <ScalarProperty Name="LoaiTK" ColumnName="LoaiTK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblThanhToan">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblThanhToan">
+              <MappingFragment StoreEntitySet="tblThanhToan">
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="SoTienThanhToan" ColumnName="SoTienThanhToan" />
+                <ScalarProperty Name="NgayThanhToan" ColumnName="NgayThanhToan" />
+                <ScalarProperty Name="PhuongThucThanhToan" ColumnName="PhuongThucThanhToan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblThietBi">
+            <EntityTypeMapping TypeName="QuanLyBanLaptopModel.tblThietBi">
+              <MappingFragment StoreEntitySet="tblThietBi">
+                <ScalarProperty Name="MaTB" ColumnName="MaTB" />
+                <ScalarProperty Name="TenTB" ColumnName="TenTB" />
+                <ScalarProperty Name="NhanHieu" ColumnName="NhanHieu" />
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
+                <ScalarProperty Name="ThongTinMoTa" ColumnName="ThongTinMoTa" />
+                <ScalarProperty Name="HinhAnhChung" ColumnName="HinhAnhChung" />
+                <ScalarProperty Name="NgayUpLoad" ColumnName="NgayUpLoad" />
+                <ScalarProperty Name="MaNhomTB" ColumnName="MaNhomTB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

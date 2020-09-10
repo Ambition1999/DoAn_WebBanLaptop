@@ -1,0 +1,11 @@
+﻿<tests>
+  <add>
+    <first>123</first>
+  </add>
+  <add>
+    <first>@d$dadasf</first>
+  </add>
+  <add>
+    <first>lenvip</first>
+  </add>
+</tests>
